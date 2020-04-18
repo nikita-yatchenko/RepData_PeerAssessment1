@@ -18,7 +18,7 @@ if(!file.exists('./movement_data.zip')){
         download.file(url = url, destfile = './movement_data.zip')
         unzip('./movement_data.zip', exdir = './data')
 }
-activity_dta <- read.csv('./data/activity.csv')
+activity_dta <- read.csv('./activity.csv')
 ```
 
 Now that we have read the data into our environment let's preprocess it

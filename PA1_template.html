@@ -373,7 +373,7 @@ summary {
         download.file(url = url, destfile = './movement_data.zip')
         unzip('./movement_data.zip', exdir = './data')
 }
-activity_dta &lt;- read.csv('./data/activity.csv')</code></pre>
+activity_dta &lt;- read.csv('./activity.csv')</code></pre>
 <p>Now that we have read the data into our environment let’s preprocess it</p>
 <pre class="r"><code>activity_dta$date &lt;- ymd(activity_dta$date)</code></pre>
 </div>
