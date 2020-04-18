@@ -75,7 +75,7 @@ Total number of missing values in the data set is `r total_nas`.
 
 Strategy for imputing is to use the mean for each interval group.
 
-The mean total number of steps taken per day did not changed, since we imputed the missing values with mean for each group: from 'r mean_steps' to `r imp_mean_steps'. Median changes slightly: from 'r median_steps` to `r imp+median_steps`.
+The mean total number of steps taken per day did not changed, since we imputed the missing values with mean for each group: from `r mean_steps` to `r imp_mean_steps`. Median changes slightly: from `r median_steps` to `r imp+median_steps`.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r}
