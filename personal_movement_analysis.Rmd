@@ -95,24 +95,3 @@ g +
         labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps")
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
