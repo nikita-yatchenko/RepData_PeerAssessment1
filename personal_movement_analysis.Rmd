@@ -79,8 +79,40 @@ The mean total number of steps taken per day did not changed, since we imputed t
 
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r}
+is.weekend <- function(x){
+        x %in% c('Sunday','Saturday')
+}
+imp_act_dta$day_week <- factor(ifelse(is.weekend(weekdays(imp_act_dta$date)),'weekend','weekday'))
 
+act_patt<-
+        imp_act_dta %>%
+        group_by(day_week, interval) %>%
+        summarise(mean_interval = mean(steps, na.rm=TRUE))
+g <- ggplot(act_patt, aes(x=interval,y=mean_interval))
+g + 
+        geom_line(color='steelblue') +
+        facet_wrap(day_week~.,nrow=2,ncol=1)+ 
+        labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps")
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
